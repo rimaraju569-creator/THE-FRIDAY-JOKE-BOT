@@ -21,11 +21,6 @@
     { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
     { "src": "icons/icon-1024.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" }
   ],
-  "screenshots": [
-    { "src": "screenshots/screenshot-narrow.png", "sizes": "512x512", "type": "image/png", "form_factor": "narrow" },
-    { "src": "screenshots/screenshot-wide.png", "sizes": "1024x1024", "type": "image/png", "form_factor": "wide" },
-    { "src": "screenshots/screenshot-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
-  ],
   "shortcuts": [
     { "name": "Voice Commands", "short_name": "Voice", "url": "./index.html?mode=voice", "description": "Start voice commands" },
     { "name": "Tell Me a Joke", "short_name": "Joke", "url": "./index.html?mode=joke", "description": "Get a random joke" },
@@ -47,4 +42,4 @@
   "protocol_handlers": [
     { "protocol": "web+joke", "url": "./index.html?joke=%s" }
   ]
-}
+    }
