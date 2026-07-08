@@ -1,0 +1,45 @@
+{
+  "name": "Friday - The Joke Bot",
+  "short_name": "Friday",
+  "description": "Friday the Joke Bot - Voice-activated AI assistant with 3000+ jokes, real-time weather, and Bengali/English language support.",
+  "id": "/friday/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "dir": "auto",
+  "lang": "en-US",
+  "categories": ["entertainment", "productivity", "utilities"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-1024.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Voice Commands", "short_name": "Voice", "url": "./index.html?mode=voice", "description": "Start voice commands" },
+    { "name": "Tell Me a Joke", "short_name": "Joke", "url": "./index.html?mode=joke", "description": "Get a random joke" },
+    { "name": "Weather", "short_name": "Weather", "url": "./index.html?mode=weather", "description": "Check the weather" }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "serviceworker": {
+    "src": "./sw.js",
+    "scope": "./"
+  },
+  "protocol_handlers": [
+    { "protocol": "web+joke", "url": "./index.html?joke=%s" }
+  ]
+}
